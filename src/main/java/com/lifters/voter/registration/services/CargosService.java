@@ -21,7 +21,6 @@ public interface CargosService {
 
     void deletar(UUID id);
 
-    @Transactional
     CargosResponseDto alterarCargo(UUID id, CargosRequestAtualizarDto cargosRequestAtualizarDto);
 
 }

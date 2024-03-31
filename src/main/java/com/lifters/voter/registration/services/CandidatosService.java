@@ -19,7 +19,6 @@ public interface CandidatosService {
 
     void deletarCandidato(UUID id);
 
-    @Transactional
     CandidatosResponseDto alterarCandidato(UUID id, CandidatosRequestAtualizarDto candidatosRequestAtualizarDto);
 
     List<RelatorioDto> relatorio();

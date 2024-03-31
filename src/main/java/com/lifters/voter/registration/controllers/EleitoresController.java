@@ -15,6 +15,7 @@ import java.util.List;
 import java.util.UUID;
 
 @RestController
+@CrossOrigin(origins ="*")
 @RequestMapping(value = "/api/eleitores")
 @AllArgsConstructor
 public class EleitoresController {

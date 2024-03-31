@@ -20,7 +20,6 @@ public interface EleitoresService {
 
     void deletarEleitor(UUID id);
 
-    @Transactional
     EleitoresResponseDto alterarEleitor(UUID id, EleitoresRequestAtualizarDto eleitoresRequestAtualizarDto);
 
     void votar(UUID id, VotarDTO votarDTO);
