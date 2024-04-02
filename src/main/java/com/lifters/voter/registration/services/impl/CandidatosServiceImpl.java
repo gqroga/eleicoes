@@ -90,14 +90,16 @@ public class CandidatosServiceImpl implements CandidatosService {
         List<Object[]> resultados = candidatosRepository.findCandidatosComMaiorVotoPorCargo();
 
         for (Object[] resultado : resultados) {
-            UUID idCandidato = (UUID) resultado[0];
-            String nomeCandidato = (String) resultado[1];
+            UUID idCargo = (UUID) resultado[0];
+            String nomeCargo = (String) resultado[1];
             Long qtdVotos = (Long) resultado[2];
-            String cargo = (String) resultado[3];
+            UUID idCandidato = (UUID) resultado[3];
+            String nomeCandidato = (String) resultado[4];
 
             RelatorioDto relatorioDto = new RelatorioDto();
-            relatorioDto.setNomeCargo(cargo);
-            relatorioDto.setVotos(qtdVotos);
+            relatorioDto.setIdCargo(idCargo);
+            relatorioDto.setNomeCargo(nomeCargo);
+            relatorioDto.setQtdVotos(qtdVotos);
             relatorioDto.setIdCandidatoVencedor(idCandidato);
             relatorioDto.setNomeCandidatoVencedor(nomeCandidato);
 
@@ -114,8 +116,6 @@ public class CandidatosServiceImpl implements CandidatosService {
             candidatosModel.setNumero(candidatosRequestAtualizarDto.getNumero());
         if (candidatosRequestAtualizarDto.getLegenda() != null)
             candidatosModel.setLegenda(candidatosRequestAtualizarDto.getLegenda());
-        if (candidatosRequestAtualizarDto.getCargo() != null)
-            candidatosModel.setCargo(candidatosRequestAtualizarDto.getCargo());
         candidatosModel.setAlteradoEm(LocalDateTime.now());
     }
 

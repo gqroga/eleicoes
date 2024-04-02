@@ -18,7 +18,6 @@ public class CandidatosResponseDto {
     private String nome;
     private Integer numero;
     private String legenda;
-    private String cargo;
     private LocalDateTime criadoEm;
     private LocalDateTime alteradoEm;
     private LocalDateTime deletadoEm;

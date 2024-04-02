@@ -39,20 +39,13 @@ public class EleitoresServiceImpl implements EleitoresService {
 
     private CandidatosRepository candidatosRepository;
 
-    private CargosRepository cargosRepository;
     @Override
     public EleitoresResponseDto criarEleitores(EleitoresRequestDto eleitoresRequestDto) {
 
         existsByCpf(eleitoresRequestDto.getCpf());
 
-        Optional<CargoModel> cargo = cargosRepository.findById(eleitoresRequestDto.getIdCargo());
-        if(cargo.isEmpty()) {
-            throw new CargosException("Cargo não encontrado.");
-        }
-
         EleitorModel eleitoresModel = modelMapper.map(eleitoresRequestDto, EleitorModel.class);
         eleitoresModel.setCriadoEm(LocalDateTime.now());
-        eleitoresModel.setCargoModel(modelMapper.map(cargo, CargoModel.class));
         eleitoresRepository.save(eleitoresModel);
         return modelMapper.map(eleitoresModel, EleitoresResponseDto.class);
     }

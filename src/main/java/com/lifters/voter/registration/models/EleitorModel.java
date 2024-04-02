@@ -35,10 +35,6 @@ public class EleitorModel {
     @CPF
     private String cpf;
 
-    @ManyToOne
-    @JoinColumn(name = "id_cargo")
-    private CargoModel cargoModel;
-
     @Column(name = "criado_em")
     private LocalDateTime criadoEm;
     @Column(name = "alterado_em")

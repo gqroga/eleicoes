@@ -34,8 +34,10 @@ public class CandidatoModel implements Serializable {
     @Column(name = "legenda")
     private String legenda;
 
-    @Column(name = "cargo")
-    private String cargo;
+    @ManyToOne
+    @JoinColumn(name = "id_cargo")
+    private CargoModel cargoModel;
+
 
     @Column(name = "criado_em")
     private LocalDateTime criadoEm;
@@ -43,4 +45,5 @@ public class CandidatoModel implements Serializable {
     private LocalDateTime alteradoEm;
     @Column(name = "deletado_em")
     private LocalDateTime deletadoEm;
+
 }

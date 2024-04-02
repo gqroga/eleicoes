@@ -23,6 +23,4 @@ public class EleitoresRequestDto {
     @NotNull(message = "Preenchimento Obrigatório")
     private String cpf;
 
-    @NotNull(message = "Preenchimento Obrigatório")
-    private UUID idCargo;
 }

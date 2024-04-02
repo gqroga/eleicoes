@@ -17,7 +17,5 @@ public class CandidatosRequestDto {
     private Integer numero;
     @NotNull(message = "Preenchimento obrigatório.")
     private String legenda;
-    @NotNull(message = "Preenchimento obrigatório.")
-    private String cargo;
 }
 

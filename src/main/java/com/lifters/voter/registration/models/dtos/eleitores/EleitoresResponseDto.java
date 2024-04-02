@@ -18,7 +18,6 @@ public class EleitoresResponseDto {
     private UUID id;
     private String nome;
     private String cpf;
-    private UUID idCargo;
     private LocalDateTime criadoEm;
     private LocalDateTime alteradoEm;
     private LocalDateTime deletadoEm;

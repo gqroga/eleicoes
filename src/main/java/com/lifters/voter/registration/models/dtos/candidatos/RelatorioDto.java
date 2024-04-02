@@ -17,7 +17,7 @@ public class RelatorioDto {
 
     private String nomeCargo;
 
-    private Long votos;
+    private Long qtdVotos;
 
     private UUID idCandidatoVencedor;
 

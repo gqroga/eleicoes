@@ -20,5 +20,4 @@ public class EleitoresRequestAtualizarDto {
     @CPF
     @NotBlank(message = "Preenchimento Obrigatório")
     private String cpf;
-    private UUID idCargo;
 }

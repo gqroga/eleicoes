@@ -32,7 +32,7 @@ public class CargoModel implements Serializable {
     private String nome;
 
     @OneToMany(mappedBy = "cargoModel", cascade = CascadeType.ALL)
-    private List<EleitorModel> eleitores;
+    private List<CandidatoModel> candidatos;
 
     @Column(name = "criado_em")
     private LocalDateTime criadoEm;
