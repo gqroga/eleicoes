@@ -17,7 +17,7 @@ Uma API para cadastro de pessoas e gestão de eleições.
 2. Clone o repositório da aplicação.
 3. O Maven fará o download de todas as dependências automaticamente.
 4. Por padrão, a aplicação irá rodar na porta 8080.
-5. Utilize o Postman ou qualquer outro serviço de sua preferência para realizar as requisições.
+5. Utilize o Swagger pela url: http://localhost:8080/swagger-ui/index.html#/ ou qualquer outro serviço de sua preferência para realizar as requisições.
 
 ## Recursos da API
 
